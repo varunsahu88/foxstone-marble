@@ -1,0 +1,19 @@
+.heroWrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  --bg-y: 0px;
+  --content-y: 0px;
+}
+
+/* Background layer parallax - Slow drift */
+.heroWrapper [class*="object-cover"] {
+  transform: translateY(var(--bg-y)) scale(1.1) !important;
+  transition: transform 0.1s linear;
+}
+
+/* Content layer parallax - Smooth float up */
+.heroWrapper [class*="absolute inset-0 flex"] {
+  transform: translateY(var(--content-y)) !important;
+  transition: transform 0.1s linear;
+}
