@@ -101,7 +101,18 @@ export const Home = () => {
 
                                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 md:p-12 bg-gradient-to-b from-black/20 via-black/10 to-black/40">
                                    <div className="space-y-3 md:space-y-6">
-                                      <motion.div initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }} className="w-8 md:w-16 h-[1px] bg-white/50 mx-auto" />
+                                      <motion.div 
+                                          initial={{ scale: 0.8, opacity: 0 }} 
+                                          animate={{ scale: 1, opacity: 1 }} 
+                                          transition={{ duration: 1.5, ease: "circOut" }}
+                                          className="mb-2"
+                                       >
+                                          <h1 className="text-4xl md:text-9xl font-rubik tracking-[0.3em] font-extralight text-white/20 select-none pointer-events-none">
+                                             ROX<span className="font-black text-accent/20">STONE</span>
+                                          </h1>
+                                          <div className="w-12 md:w-32 h-[1px] bg-accent/30 mx-auto -mt-2 md:-mt-6" />
+                                       </motion.div>
+
                                       <motion.p initial={{ y: 40, opacity: 0, filter: 'blur(8px)' }} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }} className="text-[7px] md:text-[10px] font-light text-white/70 uppercase tracking-[0.4em] md:tracking-[0.6em] border border-white/20 px-3 md:px-6 py-1 md:py-1.5 rounded-full inline-block backdrop-blur-sm">
                                          {sliderItems[currentSlide].cat}
                                       </motion.p>
