@@ -41,7 +41,7 @@ export const FigmaParallaxGroup = ({ children, className = "", height = "min-h-[
 export type ParallaxLayerSpeed = 'bg' | 'mid' | 'fore' | number;
 
 interface FigmaParallaxLayerProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   speed?: ParallaxLayerSpeed;
   offset?: number; // Total pixels traveled from bottom-to-top of scroll
   className?: string;
